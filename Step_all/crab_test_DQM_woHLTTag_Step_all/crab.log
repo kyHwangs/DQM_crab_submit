@@ -1,0 +1,442 @@
+DEBUG 2025-09-24 08:41:53.724 UTC: 	 CRAB Client version: v3.250820
+DEBUG 2025-09-24 08:41:53.724 UTC: 	 Running on: Linux cms02.knu.ac.kr 5.14.0-570.44.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Sep 17 10:32:11 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-09-24 08:41:53.724 UTC: 	 Not using Singularity
+DEBUG 2025-09-24 08:41:53.724 UTC: 	 Operating System: AlmaLinux 9.6 (Sage Margay)
+DEBUG 2025-09-24 08:41:53.725 UTC: 	 Executing command: 'submit'
+DEBUG 2025-09-24 08:41:53.725 UTC: 	 Found CRAB cache file /u/user/syjang/.crab3
+INFO 2025-09-24 08:41:53.768 UTC: 	 Will use CRAB configuration file crab_step_all.py
+DEBUG 2025-09-24 08:41:53.768 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-09-24 08:41:53.781 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+DEBUG 2025-09-24 08:41:53.790 UTC: 	 Checking credentials
+DEBUG 2025-09-24 08:41:53.790 UTC: 	 Found proxy file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:41:53.790 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-09-24 08:41:53.790 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:41:54.507 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:41:54.507 UTC: 	 Getting proxy life time left
+DEBUG 2025-09-24 08:41:54.507 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:41:55.190 UTC: 	 output : 691137
+691137
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:41:55.191 UTC: 	 Proxy valid for 191:58:57 hours
+DEBUG 2025-09-24 08:41:55.192 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-09-24 08:41:56.167 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-09-24 08:41:56.167 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:41:56.903 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:41:56.904 UTC: 	 Getting myproxy life time left for 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-24 08:41:56.904 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-24 08:41:59.933 UTC: 	 output : username: 38fa6e0a05203092490c744ebb908b4957f265da
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 453:42:22  (18.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:41:59.934 UTC: 	 Myproxy is valid: 1633320
+DEBUG 2025-09-24 08:41:59.934 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 38fa6e0a05203092490c744ebb908b4957f265da  - validity: 18 days, 21:42:00
+DEBUG 2025-09-24 08:41:59.934 UTC: 	 Command use: submit
+DEBUG 2025-09-24 08:41:59.934 UTC: 	 Options use: ['-c', 'crab_step_all.py']
+DEBUG 2025-09-24 08:41:59.935 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-09-24 08:42:01.165 UTC: 	 CRABClient version: v3.250820
+DEBUG 2025-09-24 08:42:01.166 UTC: 	 Instance is prod
+DEBUG 2025-09-24 08:42:01.166 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-09-24 08:42:01.166 UTC: 	 Command api workflow
+DEBUG 2025-09-24 08:42:01.166 UTC: 	 Started submission
+DEBUG 2025-09-24 08:42:01.166 UTC: 	 Working on /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-24 08:42:01.167 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 Loading required information from the environment
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 Found CMSSW_15_1_0_pre1 for el9_amd64_gcc12 with base /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 Loading required information from the environment
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 Found CMSSW_15_1_0_pre1 for el9_amd64_gcc12 with base /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 UNIQUE NAME: tarUUID 7f27f6e0-9b4c-4c71-8bd3-b4ec3e0da52b 
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.workArea = 'Step_all'
+config.General.requestName = 'test_DQM_woHLTTag_Step_all'
+config.section_('JobType')
+config.JobType.maxMemoryMB = 8000
+config.JobType.pluginName = 'Analysis'
+config.JobType.psetName = 'pset_DQM_test_all.py'
+config.JobType.scriptExe = 'step_all.sh'
+config.JobType.outputFiles = ['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root']
+config.JobType.inputFiles = ['step2_L1REPACK_HLT.py', 'step1_dasquery.log', 'step1_lumiRanges.log', 'step3_RAW2DIGI_L1Reco_RECO_PAT_NANO_DQM.py', 'step4_HARVESTING.py']
+config.JobType.numCores = 4
+config.section_('Data')
+config.Data.inputDataset = '/Muon0/Run2024G-v1/RAW'
+config.Data.splitting = 'FileBased'
+config.Data.inputBlocks = ['/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c']
+config.Data.inputDBS = 'global'
+config.Data.outputDatasetTag = 'CRAB3_DQM_Step_all_woHLTTag'
+config.Data.unitsPerJob = 1
+config.Data.publication = False
+config.Data.outLFNDirBase = '/store/user/sejang/DQM_test'
+config.Data.totalUnits = 1
+config.section_('Site')
+config.Site.storageSite = 'T3_KR_KNU'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2025-09-24 08:42:02.133 UTC: 	 self.config.JobType.psetName: pset_DQM_test_all.py
+INFO 2025-09-24 08:42:02.134 UTC: 	 Importing CMSSW configuration pset_DQM_test_all.py
+INFO 2025-09-24 08:42:02.241 UTC: 	 Finished importing CMSSW configuration pset_DQM_test_all.py
+INFO 2025-09-24 08:42:02.242 UTC: 	 You are requesting more than 1 core per job. Please make sure that your multi-threaded code is thread-safe and CPU-efficient, and request the correct amount of memory since the default 'maxMemoryMB' value is meant for single core jobs.
+DEBUG 2025-09-24 08:42:02.242 UTC: 	 Writing CMSSW configuration to /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/PSet.py
+DEBUG 2025-09-24 08:42:02.253 UTC: 	 The following EDM output files will be collected: ['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root']
+DEBUG 2025-09-24 08:42:02.253 UTC: 	 The following TFile output files will be collected: []
+DEBUG 2025-09-24 08:42:02.253 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2025-09-24 08:42:02.253 UTC: 	 Loading required information from the environment
+DEBUG 2025-09-24 08:42:02.253 UTC: 	 Found CMSSW_15_1_0_pre1 for el9_amd64_gcc12 with base /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1
+DEBUG 2025-09-24 08:42:02.253 UTC: 	 Making tarball in /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/7f27f6e0-9b4c-4c71-8bd3-b4ec3e0da52bdefault.tgz
+DEBUG 2025-09-24 08:42:02.254 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/bin
+DEBUG 2025-09-24 08:42:02.254 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/bin to tarball
+DEBUG 2025-09-24 08:42:02.259 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/python
+DEBUG 2025-09-24 08:42:02.259 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/python to tarball
+DEBUG 2025-09-24 08:42:02.313 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/cfipython
+DEBUG 2025-09-24 08:42:02.314 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/cfipython to tarball
+DEBUG 2025-09-24 08:42:02.725 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/lib
+DEBUG 2025-09-24 08:42:02.725 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/lib to tarball
+DEBUG 2025-09-24 08:42:03.988 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/biglib
+DEBUG 2025-09-24 08:42:03.988 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/biglib to tarball
+DEBUG 2025-09-24 08:42:03.992 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/module
+DEBUG 2025-09-24 08:42:03.992 UTC: 	 Checking directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/config/SCRAM/hooks
+DEBUG 2025-09-24 08:42:03.994 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/config/SCRAM/hooks to tarball
+DEBUG 2025-09-24 08:42:04.092 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/DQMOffline/Trigger/data to tarball
+DEBUG 2025-09-24 08:42:04.108 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/DQMOffline/Trigger/interface to tarball
+DEBUG 2025-09-24 08:42:04.420 UTC: 	 Adding directory /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/DQMOffline/Trigger/python to tarball
+DEBUG 2025-09-24 08:42:05.496 UTC: 	 Adding file step2_L1REPACK_HLT.py to tarball
+DEBUG 2025-09-24 08:42:05.500 UTC: 	 Adding file step1_dasquery.log to tarball
+DEBUG 2025-09-24 08:42:05.502 UTC: 	 Adding file step1_lumiRanges.log to tarball
+DEBUG 2025-09-24 08:42:05.505 UTC: 	 Adding file step3_RAW2DIGI_L1Reco_RECO_PAT_NANO_DQM.py to tarball
+DEBUG 2025-09-24 08:42:05.508 UTC: 	 Adding file step4_HARVESTING.py to tarball
+DEBUG 2025-09-24 08:42:05.546 UTC: 	 Uploading archive /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/7f27f6e0-9b4c-4c71-8bd3-b4ec3e0da52bdefault.tgz (3.167969.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2025-09-24 08:42:07.099 UTC: 	 Encoded data for curl request: subresource=upload&objecttype=sandbox&tarballname=5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz
+DEBUG 2025-09-24 08:42:08.011 UTC: 	 sandbox 5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz is already in the S3 store, will not upload again
+DEBUG 2025-09-24 08:42:08.012 UTC: 	 Loading required information from the environment
+DEBUG 2025-09-24 08:42:08.012 UTC: 	 Found CMSSW_15_1_0_pre1 for el9_amd64_gcc12 with base /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1
+DEBUG 2025-09-24 08:42:08.012 UTC: 	 Making tarball in /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/debugFiles.tgz
+DEBUG 2025-09-24 08:42:08.021 UTC: 	 Uploading archive /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/debugFiles.tgz (1 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2025-09-24 08:42:08.027 UTC: 	 Encoded data for curl request: subresource=upload&objecttype=sandbox&tarballname=1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz
+DEBUG 2025-09-24 08:42:08.936 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=sejang/sandboxes/1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz" -F "AWSAccessKeyId=715203df6482458ba839e73e6dab634b" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjUtMDktMjRUMDk6NDI6MDhaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAic2VqYW5nL3NhbmRib3hlcy8xYzBhYzdjYTViMGIzYWVlYzIyMjU4NjNiMGMwNGYzMjJjMjY3M2I2Y2I4YTVjNTQ3MTJhOWM2YWIwODFjMDFiLnRhci5neiJ9XX0=" -F "signature=LlMC/zaz1qBN5n9oWSKl6PHCVM8=" -F "file=@/d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/debugFiles.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2025-09-24 08:42:10.160 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2025-09-24 08:42:10.161 UTC: 	 upload to S3 of sandbox /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/debugFiles.tgz completed
+DEBUG 2025-09-24 08:42:10.161 UTC: 	 make sure that object is ready for retrieve
+DEBUG 2025-09-24 08:42:11.163 UTC: 	 Encoded data for curl request: subresource=download&objecttype=sandbox&tarballname=1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz&clientmethod=head_object
+DEBUG 2025-09-24 08:42:12.059 UTC: 	 PreSignedUrl to download sandbox received OK
+DEBUG 2025-09-24 08:42:12.063 UTC: 	 Will execute:
+ curl -v -s -f -o /dev/null --head  "https://s3.cern.ch/crabcache_prod/sejang/sandboxes/1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz?AWSAccessKeyId=715203df6482458ba839e73e6dab634b&Signature=1PzWvgR2u5KQ9hQcQwQZzy926Q8%3D&Expires=1758706931"
+DEBUG 2025-09-24 08:42:13.272 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2025-09-24 08:42:13.272 UTC: 	 sandbox /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/inputs/debugFiles.tgz successfully uploaded to S3
+DEBUG 2025-09-24 08:42:13.272 UTC: 	 Result uploading input files: 5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz 
+DEBUG 2025-09-24 08:42:13.274 UTC: 	 submit() - self.configuration from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.workArea = 'Step_all'
+config.General.requestName = 'test_DQM_woHLTTag_Step_all'
+config.section_('JobType')
+config.JobType.maxMemoryMB = 8000
+config.JobType.pluginName = 'Analysis'
+config.JobType.psetName = 'pset_DQM_test_all.py'
+config.JobType.scriptExe = 'step_all.sh'
+config.JobType.outputFiles = ['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root']
+config.JobType.inputFiles = ['step2_L1REPACK_HLT.py', 'step1_dasquery.log', 'step1_lumiRanges.log', 'step3_RAW2DIGI_L1Reco_RECO_PAT_NANO_DQM.py', 'step4_HARVESTING.py']
+config.JobType.numCores = 4
+config.section_('Data')
+config.Data.inputDataset = '/Muon0/Run2024G-v1/RAW'
+config.Data.splitting = 'FileBased'
+config.Data.inputBlocks = ['/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c']
+config.Data.inputDBS = 'global'
+config.Data.outputDatasetTag = 'CRAB3_DQM_Step_all_woHLTTag'
+config.Data.unitsPerJob = 1
+config.Data.publication = False
+config.Data.outLFNDirBase = '/store/user/sejang/DQM_test'
+config.Data.totalUnits = 1
+config.section_('Site')
+config.Site.storageSite = 'T3_KR_KNU'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2025-09-24 08:42:13.274 UTC: 	 submit() - self.configreq {'dryrun': 0, 'workflow': 'crab_test_DQM_woHLTTag_Step_all', 'saveoutput': 1, 'savelogsflag': 1, 'inputdata': '/Muon0/Run2024G-v1/RAW', 'nonvaliddata': 0, 'userfiles': [], 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'useparent': 0, 'ignorelocality': 0, 'splitalgo': 'FileBased', 'algoargs': 1, 'totalunits': 1, 'lfn': '/store/user/sejang/DQM_test', 'publication': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'publishname2': 'CRAB3_DQM_Step_all_woHLTTag', 'jobtype': 'Analysis', 'generator': 'pythia', 'addoutputfiles': ['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root'], 'maxjobruntime': 1250, 'numcores': 4, 'maxmemory': 8000, 'priority': 10, 'nonprodsw': 0, 'scriptexe': 'step_all.sh', 'asyncdest': 'T3_KR_KNU', 'requireaccelerator': 0, 'oneEventMode': 0, 'extrajdl': [], 'ignoreglobalblacklist': 0, 'partialdataset': 0, 'inputblocks': ['/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c']}
+DEBUG 2025-09-24 08:42:13.274 UTC: 	 submit() - jobconfig {'addoutputfiles': [], 'tfileoutfiles': [], 'edmoutfiles': ['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root'], 'jobarch': 'el9_amd64_gcc12', 'jobminuarch': 'x86-64-v2', 'jobsw': 'CMSSW_15_1_0_pre1', 'inputdata': '/Muon0/Run2024G-v1/RAW', 'cacheurl': 'https://cmsweb.cern.ch/S3/crabcache_prod', 'cachefilename': '5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz', 'debugfilename': '1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz', 'jobtype': 'Analysis', 'inputblocks': ['/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c']}
+INFO 2025-09-24 08:42:13.275 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2025-09-24 08:42:13.275 UTC: 	 Submitting {'dryrun': 0, 'workflow': 'crab_test_DQM_woHLTTag_Step_all', 'saveoutput': 1, 'savelogsflag': 1, 'inputdata': '/Muon0/Run2024G-v1/RAW', 'nonvaliddata': 0, 'userfiles': [], 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'useparent': 0, 'ignorelocality': 0, 'splitalgo': 'FileBased', 'algoargs': 1, 'totalunits': 1, 'lfn': '/store/user/sejang/DQM_test', 'publication': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'publishname2': 'CRAB3_DQM_Step_all_woHLTTag', 'jobtype': 'Analysis', 'generator': 'pythia', 'addoutputfiles': [], 'maxjobruntime': 1250, 'numcores': 4, 'maxmemory': 8000, 'priority': 10, 'nonprodsw': 0, 'scriptexe': 'step_all.sh', 'asyncdest': 'T3_KR_KNU', 'requireaccelerator': 0, 'oneEventMode': 0, 'extrajdl': [], 'ignoreglobalblacklist': 0, 'partialdataset': 0, 'inputblocks': ['/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c'], 'tfileoutfiles': [], 'edmoutfiles': ['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root'], 'jobarch': 'el9_amd64_gcc12', 'jobminuarch': 'x86-64-v2', 'jobsw': 'CMSSW_15_1_0_pre1', 'cacheurl': 'https://cmsweb.cern.ch/S3/crabcache_prod', 'cachefilename': '5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz', 'debugfilename': '1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz'} 
+DEBUG 2025-09-24 08:42:13.276 UTC: 	 Encoded data for curl request: dryrun=0&workflow=crab_test_DQM_woHLTTag_Step_all&saveoutput=1&savelogsflag=1&inputdata=%2FMuon0%2FRun2024G-v1%2FRAW&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&useparent=0&ignorelocality=0&splitalgo=FileBased&algoargs=1&totalunits=1&lfn=%2Fstore%2Fuser%2Fsejang%2FDQM_test&publication=0&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&publishname2=CRAB3_DQM_Step_all_woHLTTag&jobtype=Analysis&generator=pythia&maxjobruntime=1250&numcores=4&maxmemory=8000&priority=10&nonprodsw=0&scriptexe=step_all.sh&asyncdest=T3_KR_KNU&requireaccelerator=0&oneEventMode=0&ignoreglobalblacklist=0&partialdataset=0&jobarch=el9_amd64_gcc12&jobminuarch=x86-64-v2&jobsw=CMSSW_15_1_0_pre1&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2FS3%2Fcrabcache_prod&cachefilename=5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz&debugfilename=1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz&edmoutfiles=DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root&inputblocks=/Muon0/Run2024G-v1/RAW%23136fa366-c612-4718-bfa5-aaf539efd48c
+DEBUG 2025-09-24 08:42:14.517 UTC: 	 Result: {'result': [{'RequestName': '250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all'}]}
+INFO 2025-09-24 08:42:14.521 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2025-09-24 08:42:14.521 UTC: 	 Task name: 250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 08:42:14.521 UTC: 	 Project dir: Step_all/crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 08:42:14.521 UTC: 	 Please use ' crab status -d Step_all/crab_test_DQM_woHLTTag_Step_all ' to check how the submission process proceeds.
+DEBUG 2025-09-24 08:42:14.522 UTC: 	 About to return
+INFO 2025-09-24 08:42:14.531 UTC: 	 Log file is /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/crab.log
+DEBUG 2025-09-24 08:42:32.127 UTC: 	 CRAB Client version: v3.250820
+DEBUG 2025-09-24 08:42:32.128 UTC: 	 Running on: Linux cms02.knu.ac.kr 5.14.0-570.44.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Sep 17 10:32:11 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-09-24 08:42:32.128 UTC: 	 Not using Singularity
+DEBUG 2025-09-24 08:42:32.128 UTC: 	 Operating System: AlmaLinux 9.6 (Sage Margay)
+DEBUG 2025-09-24 08:42:32.128 UTC: 	 Executing command: 'status'
+DEBUG 2025-09-24 08:42:32.129 UTC: 	 Found CRAB cache file /u/user/syjang/.crab3
+DEBUG 2025-09-24 08:42:32.140 UTC: 	 Checking credentials
+DEBUG 2025-09-24 08:42:32.140 UTC: 	 Found proxy file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:42:32.140 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-09-24 08:42:32.141 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:42:32.866 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:42:32.866 UTC: 	 Getting proxy life time left
+DEBUG 2025-09-24 08:42:32.866 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:42:33.530 UTC: 	 output : 691099
+691099
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:42:33.530 UTC: 	 Proxy valid for 191:58:19 hours
+DEBUG 2025-09-24 08:42:33.531 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-09-24 08:42:34.427 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-09-24 08:42:34.427 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 08:42:35.146 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:42:35.147 UTC: 	 Getting myproxy life time left for 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-24 08:42:35.147 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-24 08:42:36.802 UTC: 	 output : username: 38fa6e0a05203092490c744ebb908b4957f265da
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 453:41:45  (18.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 08:42:36.803 UTC: 	 Myproxy is valid: 1633260
+DEBUG 2025-09-24 08:42:36.803 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 38fa6e0a05203092490c744ebb908b4957f265da  - validity: 18 days, 21:41:00
+DEBUG 2025-09-24 08:42:36.803 UTC: 	 Retrieving username ...
+DEBUG 2025-09-24 08:42:36.803 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-09-24 08:42:40.237 UTC: 	 username is sejang
+INFO 2025-09-24 08:42:44.051 UTC: 	 Rucio client intialized for account sejang
+DEBUG 2025-09-24 08:42:44.052 UTC: 	 Command use: status
+DEBUG 2025-09-24 08:42:44.052 UTC: 	 Options use: ['-d', 'Step_all/crab_test_DQM_woHLTTag_Step_all']
+DEBUG 2025-09-24 08:42:44.052 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-09-24 08:42:44.943 UTC: 	 CRABClient version: v3.250820
+DEBUG 2025-09-24 08:42:44.943 UTC: 	 Instance is prod
+DEBUG 2025-09-24 08:42:44.943 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-09-24 08:42:44.943 UTC: 	 Command api workflow
+DEBUG 2025-09-24 08:42:44.944 UTC: 	 Encoded data for curl request: subresource=search&workflow=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-24 08:42:45.856 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch', 'tm_dagman_status', 'tm_num_jobs', 'tm_uploaded']}, 'result': ['250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all', 'None', 'WAITING', 'SUBMIT', '2025-09-24 08:42:14.370235', 'None', 'None', 'None', 'CMSSW_15_1_0_pre1', 'el9_amd64_gcc12', '/Muon0/Run2024G-v1/RAW', 'F', '0', '[]', '[]', 'FileBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", '5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'sejang', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang', 'cms', 'None', 'None', 'CRAB3_DQM_Step_all_woHLTTag-00000000000000000000000000000000', 'F', 'T3_KR_KNU', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', '[]', '[]', "['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'NotKnownYet', '[]', '1250', '4', '8000', '10', 'None', '[]', 'None', 'step_all.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'None', 'F', '[]', 'T', '/store/user/sejang/DQM_test', 'F', 'None', 'F', 'None', 'Muon0', 'None', '1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz', 'None', 'F', '188.185.89.194', '1.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": ["/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c"]}', 'None', 'None', 'None', 'None', 'x86-64-v2', 'NOT_READY', '0', 'F']}
+INFO 2025-09-24 08:42:45.857 UTC: 	 CRAB project directory:		/d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 08:42:45.858 UTC: 	 Task name:			250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 08:42:45.858 UTC: 	 Grid scheduler - Task Worker:	N/A yet - NotKnownYet
+INFO 2025-09-24 08:42:45.858 UTC: 	 Status on the CRAB server:	WAITING on command SUBMIT
+INFO 2025-09-24 08:42:45.858 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 08:42:45.883 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=sejang&var-task=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all&from=1758699734000&to=now
+DEBUG 2025-09-24 08:42:45.883 UTC: 	 The task has not been submitted to the Grid scheduler yet. Not printing job information.
+INFO 2025-09-24 08:42:45.888 UTC: 	 Log file is /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/crab.log
+DEBUG 2025-09-24 13:13:50.814 UTC: 	 CRAB Client version: v3.250820
+DEBUG 2025-09-24 13:13:50.814 UTC: 	 Running on: Linux cms02.knu.ac.kr 5.14.0-570.44.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Sep 17 10:32:11 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-09-24 13:13:50.815 UTC: 	 Not using Singularity
+DEBUG 2025-09-24 13:13:50.815 UTC: 	 Operating System: AlmaLinux 9.6 (Sage Margay)
+DEBUG 2025-09-24 13:13:50.815 UTC: 	 Executing command: 'status'
+DEBUG 2025-09-24 13:13:50.816 UTC: 	 Found CRAB cache file /u/user/syjang/.crab3
+DEBUG 2025-09-24 13:13:50.827 UTC: 	 Checking credentials
+DEBUG 2025-09-24 13:13:50.827 UTC: 	 Found proxy file /tmp/x509up_u514000053
+DEBUG 2025-09-24 13:13:50.828 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-09-24 13:13:50.828 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 13:13:51.505 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 13:13:51.505 UTC: 	 Getting proxy life time left
+DEBUG 2025-09-24 13:13:51.506 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 13:13:52.201 UTC: 	 output : 691176
+691175
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 13:13:52.201 UTC: 	 Proxy valid for 191:59:35 hours
+DEBUG 2025-09-24 13:13:52.202 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-09-24 13:13:53.078 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-09-24 13:13:53.079 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u514000053
+DEBUG 2025-09-24 13:13:53.752 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 13:13:53.752 UTC: 	 Getting myproxy life time left for 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-24 13:13:53.753 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-24 13:13:56.557 UTC: 	 output : username: 38fa6e0a05203092490c744ebb908b4957f265da
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 449:10:25  (18.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 13:13:56.558 UTC: 	 Myproxy is valid: 1617000
+DEBUG 2025-09-24 13:13:56.558 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 38fa6e0a05203092490c744ebb908b4957f265da  - validity: 18 days, 17:10:00
+DEBUG 2025-09-24 13:13:56.558 UTC: 	 Retrieving username ...
+DEBUG 2025-09-24 13:13:56.558 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-09-24 13:13:59.916 UTC: 	 username is sejang
+INFO 2025-09-24 13:14:04.884 UTC: 	 Rucio client intialized for account sejang
+DEBUG 2025-09-24 13:14:04.886 UTC: 	 Command use: status
+DEBUG 2025-09-24 13:14:04.886 UTC: 	 Options use: ['-d', 'Step_all/crab_test_DQM_woHLTTag_Step_all/']
+DEBUG 2025-09-24 13:14:04.887 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-09-24 13:14:05.734 UTC: 	 CRABClient version: v3.250820
+DEBUG 2025-09-24 13:14:05.735 UTC: 	 Instance is prod
+DEBUG 2025-09-24 13:14:05.735 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-09-24 13:14:05.735 UTC: 	 Command api workflow
+DEBUG 2025-09-24 13:14:05.735 UTC: 	 Encoded data for curl request: subresource=search&workflow=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-24 13:14:06.592 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch', 'tm_dagman_status', 'tm_num_jobs', 'tm_uploaded']}, 'result': ['250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all', 'None', 'SUBMITTED', 'SUBMIT', '2025-09-24 08:42:14.370235', 'None', '2025-09-24 08:43:46.066803', 'None', 'CMSSW_15_1_0_pre1', 'el9_amd64_gcc12', '/Muon0/Run2024G-v1/RAW', 'F', '0', '[]', '[]', 'FileBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", '5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'sejang', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang', 'cms', 'None', 'None', 'CRAB3_DQM_Step_all_woHLTTag-00000000000000000000000000000000', 'F', 'T3_KR_KNU', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', '[]', '[]', "['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1250', '4', '8000', '10', 'None', '[\'Only blocks in "Data.inputBlocks" will be processed (1 blocks).\']', 'http://vocms0122.cern.ch/mon/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all', 'step_all.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0122.cern.ch', 'F', '[]', 'T', '/store/user/sejang/DQM_test', 'F', 'None', 'F', 'None', 'Muon0', 'None', '1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz', '136626424', 'F', '188.185.89.194', '1.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": ["/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c"]}', 'None', 'None', 'None', 'None', 'x86-64-v2', 'RUNNING', '1', 'T']}
+INFO 2025-09-24 13:14:06.593 UTC: 	 CRAB project directory:		/d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 13:14:06.593 UTC: 	 Task name:			250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 13:14:06.593 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2025-09-24 13:14:06.594 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2025-09-24 13:14:06.594 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-24 13:14:06.610 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=sejang&var-task=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all&from=1758699734000&to=now
+WARNING 2025-09-24 13:14:06.610 UTC: 	 Warning:			Only blocks in "Data.inputBlocks" will be processed (1 blocks).
+DEBUG 2025-09-24 13:14:06.610 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 136626424)
+DEBUG 2025-09-24 13:14:06.611 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-24 13:14:06.611 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-24 13:14:07.470 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-24 13:14:07.471 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all/status_cache.pkl
+DEBUG 2025-09-24 13:14:07.471 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u514000053 --key /tmp/x509up_u514000053 -o /tmp/crab_status-cache-etbtcqkx.pkl -w %"{http_code}" "https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all/status_cache.pkl"
+DEBUG 2025-09-24 13:14:07.471 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u514000053 --key /tmp/x509up_u514000053 -o /tmp/crab_status-cache-etbtcqkx.pkl -w %"{http_code}" "https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all/status_cache.pkl"
+DEBUG 2025-09-24 13:14:08.315 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2025-09-24 13:14:08.315 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2025-09-24 13:14:08.316 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown'], 'ResidentSetSize': [0], 'SubmitTimes': [1758703491.0], 'StartTimes': [], 'EndTimes': [], 'TotalUserCpuTimeHistory': [0.0], 'TotalSysCpuTimeHistory': [0.0], 'WallDurations': [0], 'JobIds': ['136626427.0'], 'State': 'idle', 'RecordedSite': False}}
+INFO 2025-09-24 13:14:08.316 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2025-09-24 13:14:08.316 UTC: 	 
+Jobs status:                    idle         		100.0% (1/1)
+INFO 2025-09-24 13:14:08.317 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2025-09-24 13:14:08.323 UTC: 	 Log file is /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/crab.log
+DEBUG 2025-09-25 02:23:37.712 UTC: 	 CRAB Client version: v3.250820
+DEBUG 2025-09-25 02:23:37.712 UTC: 	 Running on: Linux cms02.knu.ac.kr 5.14.0-570.44.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Sep 17 10:32:11 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-09-25 02:23:37.712 UTC: 	 Not using Singularity
+DEBUG 2025-09-25 02:23:37.712 UTC: 	 Operating System: AlmaLinux 9.6 (Sage Margay)
+DEBUG 2025-09-25 02:23:37.712 UTC: 	 Executing command: 'status'
+DEBUG 2025-09-25 02:23:37.713 UTC: 	 Found CRAB cache file /u/user/syjang/.crab3
+DEBUG 2025-09-25 02:23:37.740 UTC: 	 Checking credentials
+DEBUG 2025-09-25 02:23:37.740 UTC: 	 Found proxy file /tmp/x509up_u514000053
+DEBUG 2025-09-25 02:23:37.740 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2025-09-25 02:23:37.740 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u514000053
+DEBUG 2025-09-25 02:23:38.459 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-25 02:23:38.459 UTC: 	 Getting proxy life time left
+DEBUG 2025-09-25 02:23:38.459 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u514000053
+DEBUG 2025-09-25 02:23:39.121 UTC: 	 output : 691175
+691175
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-25 02:23:39.121 UTC: 	 Proxy valid for 191:59:35 hours
+DEBUG 2025-09-25 02:23:39.122 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2025-09-25 02:23:40.015 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2025-09-25 02:23:40.016 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u514000053
+DEBUG 2025-09-25 02:23:40.681 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-25 02:23:40.682 UTC: 	 Getting myproxy life time left for 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-25 02:23:40.682 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 38fa6e0a05203092490c744ebb908b4957f265da
+DEBUG 2025-09-25 02:23:43.638 UTC: 	 output : username: 38fa6e0a05203092490c744ebb908b4957f265da
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(01|02).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-dev-tw(01|02|03|04).cern.ch|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 436:00:38  (18.2 days)
+
+ error: 
+ retcode : 0
+DEBUG 2025-09-25 02:23:43.638 UTC: 	 Myproxy is valid: 1569600
+DEBUG 2025-09-25 02:23:43.639 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 38fa6e0a05203092490c744ebb908b4957f265da  - validity: 18 days, 4:00:00
+DEBUG 2025-09-25 02:23:43.639 UTC: 	 Retrieving username ...
+DEBUG 2025-09-25 02:23:43.639 UTC: 	 Retrieving username from CRIC...
+DEBUG 2025-09-25 02:23:48.047 UTC: 	 username is sejang
+INFO 2025-09-25 02:23:52.498 UTC: 	 Rucio client intialized for account sejang
+DEBUG 2025-09-25 02:23:52.499 UTC: 	 Command use: status
+DEBUG 2025-09-25 02:23:52.499 UTC: 	 Options use: ['-d', 'Step_all/crab_test_DQM_woHLTTag_Step_all/']
+DEBUG 2025-09-25 02:23:52.499 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2025-09-25 02:23:53.350 UTC: 	 CRABClient version: v3.250820
+DEBUG 2025-09-25 02:23:53.351 UTC: 	 Instance is prod
+DEBUG 2025-09-25 02:23:53.351 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2025-09-25 02:23:53.351 UTC: 	 Command api workflow
+DEBUG 2025-09-25 02:23:53.351 UTC: 	 Encoded data for curl request: subresource=search&workflow=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-25 02:23:54.214 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch', 'tm_dagman_status', 'tm_num_jobs', 'tm_uploaded']}, 'result': ['250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all', 'None', 'SUBMITTED', 'SUBMIT', '2025-09-24 08:42:14.370235', 'None', '2025-09-24 08:43:46.066803', 'None', 'CMSSW_15_1_0_pre1', 'el9_amd64_gcc12', '/Muon0/Run2024G-v1/RAW', 'F', '0', '[]', '[]', 'FileBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", '5d65179a0449839c6a84d9e8c948f4b8947fb3fe640ebbc965bb948a9614ab39.tar.gz', 'https://cmsweb.cern.ch/S3/crabcache_prod', 'sejang', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sejang/CN=860218/CN=Seo Yun Jang', 'cms', 'None', 'None', 'CRAB3_DQM_Step_all_woHLTTag-00000000000000000000000000000000', 'F', 'T3_KR_KNU', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', '[]', '[]', "['DQM_V0001_R000383814__Global__CMSSW_X_Y_Z__RECO.root']", 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1250', '4', '8000', '10', "['/FakeDataset/fakefile-FakePublish-24fd8abc8e0e8241b54c9d461896d2ee/USER']", '[\'Only blocks in "Data.inputBlocks" will be processed (1 blocks).\']', 'http://vocms0122.cern.ch/mon/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all', 'step_all.sh', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'crab3@vocms0122.cern.ch', 'F', '[]', 'T', '/store/user/sejang/DQM_test', 'F', 'None', 'F', 'None', 'Muon0', 'None', '1c0ac7ca5b0b3aeec2225863b0c04f322c2673b6cb8a5c54712a9c6ab081c01b.tar.gz', '136626424', 'F', '188.185.89.194', '1.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": ["/Muon0/Run2024G-v1/RAW#136fa366-c612-4718-bfa5-aaf539efd48c"]}', 'None', 'None', 'None', 'None', 'x86-64-v2', 'COMPLETED', '1', 'T']}
+INFO 2025-09-25 02:23:54.214 UTC: 	 CRAB project directory:		/d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-25 02:23:54.215 UTC: 	 Task name:			250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-25 02:23:54.215 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
+INFO 2025-09-25 02:23:54.215 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2025-09-25 02:23:54.215 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+INFO 2025-09-25 02:23:54.233 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=sejang&var-task=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all&from=1758699734000&to=now
+WARNING 2025-09-25 02:23:54.234 UTC: 	 Warning:			Only blocks in "Data.inputBlocks" will be processed (1 blocks).
+DEBUG 2025-09-25 02:23:54.234 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 136626424)
+DEBUG 2025-09-25 02:23:54.234 UTC: 	 Webdir is located at http://vocms0122.cern.ch/mon/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-25 02:23:54.234 UTC: 	 Encoded data for curl request: subresource=webdirprx&workflow=250924_084214%3Asejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-25 02:23:55.087 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all
+DEBUG 2025-09-25 02:23:55.088 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all/status_cache.pkl
+DEBUG 2025-09-25 02:23:55.088 UTC: 	 Will execute:
+curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u514000053 --key /tmp/x509up_u514000053 -o /tmp/crab_status-cache-1bbhc884.pkl -w %"{http_code}" "https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all/status_cache.pkl"
+DEBUG 2025-09-25 02:23:55.088 UTC: 	 Executing command :
+ curl -sS --capath /etc/grid-security/certificates --cert /tmp/x509up_u514000053 --key /tmp/x509up_u514000053 -o /tmp/crab_status-cache-1bbhc884.pkl -w %"{http_code}" "https://cmsweb.cern.ch/scheddmon/0122/sejang/250924_084214:sejang_crab_test_DQM_woHLTTag_Step_all/status_cache.pkl"
+DEBUG 2025-09-25 02:23:55.936 UTC: 	 output : 200
+ error: 
+ retcode : 0
+DEBUG 2025-09-25 02:23:55.937 UTC: 	 exitcode: 0
+stdout: 200
+stderr: 
+error details: 
+DEBUG 2025-09-25 02:23:55.937 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'Restarts': 0, 'SiteHistory': ['Unknown', 'T3_UK_London_QMUL', 'T3_UK_London_QMUL'], 'ResidentSetSize': [6305400], 'SubmitTimes': [1758703491.0], 'StartTimes': [1758726382.0], 'EndTimes': [1758764162.0], 'TotalUserCpuTimeHistory': [41233], 'TotalSysCpuTimeHistory': [658], 'WallDurations': [9.0, 296.06507444381714, 37780.0], 'JobIds': ['136626427.0'], 'State': 'finished', 'RecordedSite': True, 'Error': [0, 'OK', {}]}}
+INFO 2025-09-25 02:23:55.938 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2025-09-25 02:23:55.938 UTC: 	 
+Jobs status:                    finished     		100.0% (1/1)
+INFO 2025-09-25 02:23:55.939 UTC: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2025-09-25 02:23:55.939 UTC: 	 
+Warning: the average jobs CPU efficiency is less than 50%, please consider to request a lower number of threads for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task
+INFO 2025-09-25 02:23:55.939 UTC: 	 
+Summary of run jobs:
+ * Memory: 6157MB min, 6157MB max, 6158MB ave
+ * Runtime: 10:29:40 min, 10:29:40 max, 10:29:40 ave
+ * CPU eff: 28% min, 28% max, 28% ave
+ * Waste: 0:05:05 (1% of total)
+
+INFO 2025-09-25 02:23:55.945 UTC: 	 Log file is /d0/scratch/syjang/Muon_DQM/CMSSW_15_1_0_pre1/src/crab_jobs/Step_all/crab_test_DQM_woHLTTag_Step_all/crab.log
