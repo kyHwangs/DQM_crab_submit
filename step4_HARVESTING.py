@@ -1,13 +1,13 @@
 # Auto generated configuration file
-# using: 
-# Revision: 1.19 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: step4 -s HARVESTING:@standardDQM+@miniAODDQM+@nanoAODDQM --conditions auto:run3_data --data --filetype DQM --scenario pp --era Run3_2024 -n 100 --filein file:step3_inDQM.root --fileout file:step4.root
+# ZMM (Z->mu mu) simulation with 2024/2025 setup
+# Step 4: HARVESTING for DQM output
+# Command: cmsDriver.py step4 -s HARVESTING:@standardDQM+@miniAODDQM --conditions auto:phase1_2024_realistic --filetype DQM --era Run3_2024 -n 400 --filein file:step3_inDQM.root --fileout file:step4.root
+
 import FWCore.ParameterSet.Config as cms
 
-from Configuration.Eras.Era_Run3_2024_cff import Run3_2024
+from Configuration.Eras.Era_Run3_2025_cff import Run3_2025
 
-process = cms.Process('HARVESTING',Run3_2024)
+process = cms.Process('HARVESTING',Run3_2025)
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
@@ -21,7 +21,7 @@ process.load('Configuration.StandardSequences.Harvesting_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(2000),
+    input = cms.untracked.int32(800),
     output = cms.optional.untracked.allowed(cms.int32,cms.PSet)
 )
 
@@ -64,7 +64,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('step4 nevts:2000'),
+    annotation = cms.untracked.string('step4 nevts:800'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -75,7 +75,7 @@ process.configurationMetadata = cms.untracked.PSet(
 
 # Other statements
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run3_data', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2025_realistic', '')
 
 # Path and EndPath definitions
 process.alcaHarvesting = cms.Path()
@@ -94,15 +94,12 @@ process.validationpreprodHarvesting = cms.Path(process.postValidation_preprod+pr
 process.validationpreprodHarvestingNoHLT = cms.Path(process.postValidation_preprod+process.postValidation_gen)
 process.validationprodHarvesting = cms.Path(process.hltpostvalidation_prod+process.postValidation_gen)
 process.DQMHarvestMiniAOD_step = cms.Path(process.DQMHarvestMiniAOD)
-process.DQMHarvestNanoAOD_step = cms.Path(process.DQMHarvestNanoAOD)
 process.dqmsave_step = cms.Path(process.DQMSaver)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.dqmHarvesting,process.DQMHarvestMiniAOD_step,process.DQMHarvestNanoAOD_step,process.dqmsave_step)
+process.schedule = cms.Schedule(process.dqmHarvesting,process.DQMHarvestMiniAOD_step,process.dqmsave_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
-
-
 
 # Customisation from command line
 
@@ -110,3 +107,4 @@ associatePatAlgosToolsTask(process)
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
 # End adding early deletion
+
