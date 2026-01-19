@@ -19,7 +19,6 @@ config.JobType.outputFiles = ['DQM_V0001_R000398390__Global__CMSSW_X_Y_Z__RECO.r
 config.Data.inputDBS = 'global'
 config.Data.splitting = 'FileBased'
 config.Data.unitsPerJob = 1
-config.Data.totalUnits = 100
 config.Data.outLFNDirBase = '/eos/cms/store/group/phys_muon/ec/HLT/MuonHLTRun3_PixelDegradation_From2024B/DQMTest/Run398390/'
 config.Data.publication = False
 config.Data.outputDatasetTag = 'HLTOfflineDQM_2025G_TnP_Run398390'
