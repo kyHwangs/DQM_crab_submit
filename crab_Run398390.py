@@ -12,14 +12,15 @@ config.JobType.psetName = 'pset_DQM_test_all.py'
 config.JobType.scriptExe = 'step_all.sh'
 config.JobType.maxMemoryMB = 7500
 config.JobType.numCores = 4
-config.Data.userInputFiles = open('Run398390_ZMu.txt').readlines()
 config.JobType.inputFiles = ['step3_RAW2DIGI_L1Reco_RECO_PAT_DQM.py', 'step4_HARVESTING.py']
 config.JobType.outputFiles = ['DQM_V0001_R000398390__Global__CMSSW_X_Y_Z__RECO.root']
 
+config.Data.inputDataset = '/Muon0/Run2025G-ZMu-PromptReco-v1/RAW-RECO'
+config.Data.userInputFiles = open('Run398391_ZMu.txt').readlines()
 config.Data.inputDBS = 'global'
 config.Data.splitting = 'FileBased'
 config.Data.unitsPerJob = 1
-config.Data.outLFNDirBase = '/eos/cms/store/group/phys_muon/ec/HLT/MuonHLTRun3_PixelDegradation_From2024B/DQMTest/Run398390/'
+config.Data.outLFNDirBase = '/store/group/phys_muon/ec/HLT/MuonHLTRun3_PixelDegradation_From2024B/DQMTest/Run398390'
 config.Data.publication = False
 config.Data.outputDatasetTag = 'HLTOfflineDQM_2025G_TnP_Run398390'
 
