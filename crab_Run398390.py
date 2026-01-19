@@ -16,7 +16,7 @@ config.JobType.inputFiles = ['step3_RAW2DIGI_L1Reco_RECO_PAT_DQM.py', 'step4_HAR
 config.JobType.outputFiles = ['DQM_V0001_R000398390__Global__CMSSW_X_Y_Z__RECO.root']
 
 config.Data.inputDataset = '/Muon0/Run2025G-ZMu-PromptReco-v1/RAW-RECO'
-config.Data.userInputFiles = open('Run398391_ZMu.txt').readlines()
+config.Data.userInputFiles = open('Run398390_ZMu.txt').readlines()
 config.Data.inputDBS = 'global'
 config.Data.splitting = 'FileBased'
 config.Data.unitsPerJob = 1
